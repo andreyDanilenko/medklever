@@ -1,0 +1,19 @@
+html { 
+  box-sizing: border-box; 
+}
+
+*, *::before, *::after { 
+  box-sizing: inherit; 
+}
+
+body {
+  font-family: $f-primary, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: $c-font;
+  background-color: $c-bg;
+}
+
+svg {
+  fill: $c-font;
+}
