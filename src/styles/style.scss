@@ -1,5 +1,15 @@
+@import "variables/media.scss";
+@import "variables/grid.scss";
+@import "variables/colors.scss";
+@import "variables/typography.scss";
+@import "variables/other.scss";
+
 @import "global/fonts.scss";
 @import "global/reset.scss";
+@import "global/base.scss";
+
+@import "mixin/media.scss";
+@import "mixin/grid.scss";
 
 @import "../blocks/header/header.scss";
-@import "../blocks/footer/footer.scss";
+//@import "../blocks/footer/footer.scss";
