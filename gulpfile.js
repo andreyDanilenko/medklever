@@ -16,7 +16,7 @@ function serve() {
   });
 
   build();
-
+  watch(`${SRC_DIR}/**/*.js`, script);
   watch(`${SRC_DIR}/**/*.scss`, style);
   watch(`${SRC_DIR}/**/*.pug`, markup);
   watch(`${SRC_DIR}/assets/**/*`, assets);
@@ -28,6 +28,12 @@ function style() {
     .pipe(dest(DIST_DIR))
     .pipe(browserSync.stream());
 };
+
+function script() {
+  return src(`${SRC_DIR}/scripts/script.js`)
+    .pipe(dest(DIST_DIR))
+    .pipe(browserSync.stream());
+}
 
 function markup() {
   return src(`${SRC_DIR}/pages/**/*pug`)
@@ -51,7 +57,7 @@ function cleanup(cb) {
 
 const build = series([
   cleanup,
-  parallel([markup, style, assets])
+  parallel([markup, style, assets, script])
 ]);
 
 exports.default = serve;
