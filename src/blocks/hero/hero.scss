@@ -1,0 +1,52 @@
+.hero {
+  background-image: url("assets/img/background-main.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 69px 0 48px;
+  transition: 3s;
+
+  &--open {
+    animation: mova 2.5s ease-in-out;
+    padding: 247px 0 48px;
+  }
+
+  @keyframes mova {
+    0% {
+      padding: 69px 0 48px;
+    }
+
+    100% {
+      padding: 247px 0 48px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41px;
+    padding: 5px 34px;
+
+    color: $c-bg-main;
+    text-shadow: 6px 7px 4px rgba(0, 0, 0, 0.54);
+  }
+
+  &__discription {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    padding: 5px 34px;
+
+    color: $c-bg-main;
+    text-shadow: 4px 3px 7px rgba(0, 0, 0, 0.98);
+  }
+
+  &__button {
+    padding: 15px 34px;
+  }
+
+  &__button-appointment {
+    padding: 13px 24px;
+    font-size: 13px;
+  }
+}
