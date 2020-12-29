@@ -1,0 +1,50 @@
+.method {
+  &__wrapper {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__patent {
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  &__title {
+    position: relative;
+
+    padding: 25px 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: $c-font-primary;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 2px;
+
+      margin: 11px auto 0;
+
+      background-color: $c-bg-primary;
+    }
+  }
+
+  &__list-wrapper {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    text-align: start;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $c-font-secondary;
+  }
+
+  &__item {
+    position: relative;
+    margin: 14px 0;
+  }
+}
