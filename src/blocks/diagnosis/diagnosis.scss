@@ -1,0 +1,50 @@
+.diagnosis {
+  &__wrapper {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+  }
+
+  &__title {
+    padding: 51px 0 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: $c-font-primary;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 2px;
+      margin: 11px auto 0;
+      background-color: $c-bg-primary;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $c-font-secondary;
+  }
+
+  &__item {
+    padding: 25px 0;
+  }
+
+  &__item-img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  &__button-appointment {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    margin: 20px 0 75px;
+  }
+}
