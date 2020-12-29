@@ -1,0 +1,49 @@
+.info {
+  &__wrapper {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+  }
+
+  &__title {
+    padding: 25px 0 27px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: $c-font-primary;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 2px;
+      margin: 11px auto 0;
+      background-color: $c-bg-primary;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 372px;
+  }
+
+  &__name {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 28px 0 16px;
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  &__paragraph {
+    margin: 7px 0 14px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: start;
+    color: $c-font-secondary;
+  }
+}
