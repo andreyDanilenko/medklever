@@ -1,0 +1,25 @@
+.interior {
+  &__wrapper {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+  }
+
+  &__title {
+    padding: 25px 0 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: $c-font-primary;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 2px;
+      margin: 11px auto 0;
+      background-color: $c-bg-primary;
+    }
+  }
+}
