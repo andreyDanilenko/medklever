@@ -1,0 +1,68 @@
+.slider {
+  position: relative;
+
+  &__container {
+    margin: 20px auto 0;
+    width: 100vw;
+  }
+
+  #viewport {
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    transition: 0.2s;
+  }
+
+  &__item {
+    min-width: 200px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  #viewSlider {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    display: flex;
+  }
+
+  &__indicator {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    background-color: $c-bg-main;
+    border-radius: 50%;
+  }
+
+  &__indicator .active {
+    background-color: $c-bg-primary;
+  }
+
+  &__next,
+  &__prev {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+    border: none;
+    top: 0;
+  }
+
+  &__prev {
+    right: 0;
+  }
+}
+
+.active {
+  background-color: $c-bg-primary;
+}
