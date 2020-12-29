@@ -1,0 +1,80 @@
+.header {
+  position: relative;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+
+  &__logo {
+    padding: 26px 20px;
+  }
+
+  &__logo-svg {
+    display: block;
+    margin: 0 auto;
+    width: 137px;
+    height: 17px;
+    fill: $c-bg-main;
+
+    &:hover {
+      transition: 0.3s;
+      fill: $c-bg-primary;
+    }
+  }
+
+  &__nav-item {
+    padding: 10px 20px;
+  }
+
+  &__nav-link {
+    position: relative;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $c-bg-main;
+
+    &:hover {
+      transition: 0.3s;
+      color: $c-bg-primary;
+    }
+  }
+
+  &__contacts {
+    display: none;
+  }
+
+  &__button {
+    display: none;
+  }
+
+  &__mobile-call {
+    position: relative;
+    position: absolute;
+    top: 15px;
+    right: 34px;
+    display: block;
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0.5px solid $c-bg-main;
+    outline: none;
+
+    &:hover {
+      transition: 0.3s;
+      border: 0.5px solid $c-bg-primary;
+    }
+  }
+
+  &__mobile-call:hover &__mobile-call-svg {
+    transition: 0.3s;
+    fill: $c-bg-primary;
+  }
+
+  &__mobile-call-svg {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+  }
+}
