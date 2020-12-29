@@ -30,7 +30,7 @@ function style() {
 };
 
 function script() {
-  return src(`${SRC_DIR}/scripts/script.js`)
+  return src(`${SRC_DIR}/script/script.js`)
     .pipe(dest(DIST_DIR))
     .pipe(browserSync.stream());
 }
