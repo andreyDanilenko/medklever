@@ -1,0 +1,57 @@
+.reception {
+  background-color: rgba(96, 206, 217, 0.15);
+
+  &__wrapper {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+  }
+
+  &__title {
+    padding: 33px 0 18px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: $c-font-primary;
+  }
+
+  &__form-warpper {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__input-name {
+    width: 100%;
+    border-radius: 20px 0 0 0;
+    border: none;
+    padding: 17px 24px;
+    margin: 9px 0;
+  }
+
+  &__input-tel {
+    width: 100%;
+    border: none;
+    padding: 17px 24px;
+    margin: 9px 0;
+  }
+
+  &__input-text {
+    width: 100%;
+    min-height: 145px;
+    border-radius: 0 0 50px 0;
+    border: none;
+    resize: none;
+    padding: 17px 24px;
+    margin: 16px 0 27px;
+  }
+
+  &__button-appointment {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    margin-bottom: 44px;
+  }
+}
