@@ -1,19 +1,21 @@
-html { 
-  box-sizing: border-box; 
+html {
+  box-sizing: border-box;
 }
 
-*, *::before, *::after { 
-  box-sizing: inherit; 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
   font-family: $f-primary, sans-serif;
   font-size: 18px;
   line-height: 22px;
-  color: $c-font;
+  color: $c-font-primary;
   background-color: $c-bg;
 }
 
 svg {
-  fill: $c-font;
+  fill: $c-bg-main;
 }
