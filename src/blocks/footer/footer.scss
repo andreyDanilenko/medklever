@@ -1,0 +1,59 @@
+.footer {
+  padding: 25px 0 0;
+
+  &__wrapper {
+    display: none;
+
+    @include lg {
+      display: block;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    background-image: url("assets/img/medklever-logo-2.svg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    margin: 38px 0;
+    width: 166px;
+    height: 29px;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__nav-item {
+    padding: 41px 15px;
+  }
+
+  &__contacts {
+    padding-top: 23px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $c-font-secondary;
+  }
+
+  &__contacts-item {
+    padding: 2px 0;
+  }
+
+  &__button {
+    margin-top: 32px;
+  }
+
+  &__button-appointment {
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 25px 0 67px;
+  }
+}
