@@ -6,6 +6,10 @@
   padding: 69px 0 48px;
   transition: 3s;
 
+  @include lg {
+    padding: 174px 0 84px;
+  }
+
   &--open {
     animation: mova 2.5s ease-in-out;
     padding: 247px 0 48px;
@@ -21,32 +25,115 @@
     }
   }
 
+  &__row {
+    @include row;
+    justify-content: space-around;
+  }
+
+  &__col-title {
+    @include col;
+
+    @include lg {
+      margin-top: 65px;
+      @include col(1/2);
+    }
+  }
+
+  &__col-form {
+    display: none;
+    @include col;
+
+    @include lg {
+      display: block;
+      @include col(1/3);
+      max-width: 358px;
+      background-color: $c-bg-main;
+      box-shadow: 6px 10px 8px rgba(0, 0, 0, 0.39);
+      @include row;
+      justify-content: center;
+    }
+  }
+
+  &__title-form {
+    @include col;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin: 30px 0 10px;
+  }
+
+  &__form {
+    @include col;
+  }
+
+  &__form-item input {
+    width: 100%;
+    border: none;
+    padding: 17px 15px;
+    background-color: #e6e6e6;
+    margin: 10px 0;
+  }
+
+  &__form-item:nth-child(1) input {
+    border-radius: $btn-border-radius 0 0 0;
+  }
+
+  &__form-item:nth-child(3) input {
+    border-radius: 0 0 $btn-border-radius 0;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 41px;
-    padding: 5px 34px;
+    padding: 5px 0;
 
     color: $c-bg-main;
     text-shadow: 6px 7px 4px rgba(0, 0, 0, 0.54);
+
+    @include lg {
+      font-size: 70px;
+      line-height: 78px;
+    }
   }
 
   &__discription {
     font-weight: 400;
     font-size: 13px;
     line-height: 17px;
-    padding: 5px 34px;
+    padding: 5px 0;
 
     color: $c-bg-main;
     text-shadow: 4px 3px 7px rgba(0, 0, 0, 0.98);
+
+    @include lg {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 
   &__button {
-    padding: 15px 34px;
+    padding: 15px 0;
+
+    @include lg {
+      display: none;
+    }
   }
 
   &__button-appointment {
     padding: 13px 24px;
     font-size: 13px;
+
+    @include lg {
+      width: 100%;
+      font-size: 18px;
+      line-height: 22px;
+      margin: 10px 0 60px;
+    }
+  }
+
+  &__reception {
+    background-color: white;
   }
 }

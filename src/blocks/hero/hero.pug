@@ -1,11 +1,23 @@
 mixin hero 
   section.hero
     .container
-      .hero__wrapper
-        h1.hero__title Гусев Антон Иванович
-        p.hero__discription 
-          | Кандидат медицинских наук, хирург травматолог-ортопед высшей медицинской категории.
-          | Стаж практической деятельности — 39 лет.
-          | Состоит в числе врачей-экспертов в области травматологии-ортопедии г. Санкт-Петербурга.
-        .hero__button    
-          button.hero__button-appointment.button Записаться на приём!  
+      .hero__row
+        .hero__col-title
+          h1.hero__title Гусев Антон Иванович
+          p.hero__discription 
+            | Кандидат медицинских наук, хирург травматолог-ортопед высшей медицинской категории.
+            | Стаж практической деятельности — 39 лет.
+            | Состоит в числе врачей-экспертов в области травматологии-ортопедии г. Санкт-Петербурга.
+          .hero__button    
+            button.hero__button-appointment.button Записаться на приём!
+        .hero__col-form 
+          h2.hero__title-form Запишитесь прямо сейчас и получите скидку 10% на первичный приём!  
+          form.hero__form(method="post")
+            .hero__form-item
+              input.hero__input-name(type="text" placeholder="Ваше ФИО" required)
+            .hero__form-item  
+              input.hero__input-tel(type="tel" placeholder="+7 (___) ___-__-__" required)
+            .hero__form-item  
+              input.hero__input-email(type="email" placeholder="Ваш E-mail" required)
+            .hero__button-form
+              button.hero__button-appointment.button-appointment.button Записаться на приём       

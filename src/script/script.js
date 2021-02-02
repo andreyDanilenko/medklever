@@ -14,15 +14,24 @@ navToggle.addEventListener('click', function () {
     wrapper.classList.remove('header__wrapper--opened');
   }
 
-  nav.classList.toggle('header__nav--opened')
   header.classList.toggle('hero--open');
 });
 
-// Слайдер для мобильного
+// Карусель для мобильного
 
-const slidesToShow = 1;
+let slidesToShow = 1;
 const slidesToScroll = 1;
 let position = 0;
+
+const mediaQueryT = window.matchMedia('(min-width: 642px)')
+if (mediaQueryT.matches) {
+  slidesToShow = 2;
+}
+
+const mediaQueryD = window.matchMedia('(min-width: 1400px)')
+if (mediaQueryD.matches) {
+  slidesToShow = 3;
+}
 
 const btnPrev = document.getElementById("prev");
 const btnNext = document.getElementById("next");
@@ -41,14 +50,10 @@ slideItem.forEach(item => {
 indicators.forEach((item, i) => {
   item.addEventListener('click', function () {
     position = -(itemWidth * i);
-
-    item.classList.add("active");
-
     setPosition();
   });
   console.log(item)
 });
-
 
 btnPrev.addEventListener('click', function () {
   const itemsLeft = slideItemCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
@@ -81,13 +86,5 @@ window.setInterval(function () {
 
 const setPosition = () => {
   slideList.style.transform = `translateX(${position}px)`;
-  slideList.style.transition = `3s`;
+  slideList.style.transition = `1s`;
 }
-
-
-
-
-
-
-
-

@@ -1,4 +1,5 @@
 include /blocks/header/header
+include /blocks/footer/footer
 include /blocks/hero/hero
 include /blocks/info/info
 include /blocks/method/method
@@ -15,19 +16,20 @@ block variables
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet" href="/style.css")
     title #{title}
   body
-    
+
     +header()
-    
+
     block content
+
+    +footer()
 
     script(src="/script.js")
 
- 
 
-     
-     
-  
+
+
+

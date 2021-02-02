@@ -1,5 +1,5 @@
 @mixin xs-only {
-  @media (max-width: #{$sm - 1px}) {
+  @media (max-width: #{$lg - 1px}) {
     @content;
   }
 }
@@ -18,12 +18,6 @@
 
 @mixin lg {
   @media (min-width: #{$lg}) {
-    @content;
-  }
-}
-
-@mixin xl {
-  @media (min-width: #{$xl}) {
     @content;
   }
 }

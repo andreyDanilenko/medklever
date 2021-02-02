@@ -1,17 +1,18 @@
 .diagnosis {
-  &__wrapper {
-    margin: 0 auto;
-    text-align: center;
-    width: 75%;
-  }
-
   &__title {
+    text-align: center;
     padding: 51px 0 20px;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
 
     color: $c-font-primary;
+
+    @include lg {
+      padding: 103px 0;
+      font-size: 36px;
+      line-height: 44px;
+    }
 
     &::after {
       content: "";
@@ -20,19 +21,36 @@
       height: 2px;
       margin: 11px auto 0;
       background-color: $c-bg-primary;
+
+      @include lg {
+        width: 216px;
+      }
     }
   }
 
   &__list {
+    @include row;
+    justify-content: center;
     text-align: center;
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
     color: $c-font-secondary;
+
+    @include lg {
+      justify-content: space-between;
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   &__item {
+    @include col(3/4);
     padding: 25px 0;
+
+    @include lg {
+      @include col(1/4);
+    }
   }
 
   &__item-img {
@@ -41,10 +59,25 @@
     margin-bottom: 25px;
   }
 
+  &__button {
+    margin: 0 auto;
+    @include col(3/4);
+
+    @include lg {
+      @include col(2/7);
+    }
+  }
+
   &__button-appointment {
     width: 100%;
     padding: 15px;
     font-size: 14px;
+    line-height: 17px;
     margin: 20px 0 75px;
+
+    @include lg {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 }

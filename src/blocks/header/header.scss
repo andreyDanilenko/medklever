@@ -1,11 +1,37 @@
 .header {
-  position: relative;
   position: absolute;
   width: 100%;
   text-align: center;
 
+  @include lg {
+    background-color: $c-bg;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    @include lg {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__logo {
-    padding: 26px 20px;
+    background-image: url("assets/img/medklever-logo-1.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 26px auto;
+    width: 139px;
+    height: 24px;
+
+    @include lg {
+      background-image: url("assets/img/medklever-logo-2.svg");
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      margin: 38px 0;
+      width: 166px;
+      height: 29px;
+    }
   }
 
   &__logo-svg {
@@ -15,6 +41,10 @@
     height: 17px;
     fill: $c-bg-main;
 
+    @include lg {
+      fill: $c-bg-primary;
+    }
+
     &:hover {
       transition: 0.3s;
       fill: $c-bg-primary;
@@ -22,17 +52,29 @@
   }
 
   &__nav-item {
-    padding: 10px 20px;
+    padding: 10px 0;
+
+    @include lg {
+      padding: 41px 15px;
+    }
   }
 
   &__nav-link {
     position: relative;
     font-size: 18px;
     line-height: 22px;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     color: $c-bg-main;
+
+    @include lg {
+      font-weight: 400;
+      text-transform: initial;
+      font-size: 18px;
+      line-height: 22px;
+      color: $c-font-secondary;
+    }
 
     &:hover {
       transition: 0.3s;
@@ -42,17 +84,41 @@
 
   &__contacts {
     display: none;
+    font-size: 14px;
+    line-height: 17px;
+    color: $c-font-secondary;
+
+    @include lg {
+      display: block;
+      padding-top: 23px;
+    }
+  }
+
+  &__contacts-item {
+    padding: 2px 0;
   }
 
   &__button {
     display: none;
+
+    @include lg {
+      display: block;
+      margin-top: 32px;
+    }
+  }
+
+  &__button-appointment {
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
   }
 
   &__mobile-call {
     position: relative;
     position: absolute;
-    top: 15px;
-    right: 34px;
+    top: -8px;
+    right: 0;
     display: block;
     width: 37px;
     height: 37px;
@@ -61,14 +127,18 @@
     border: 0.5px solid $c-bg-main;
     outline: none;
 
+    @include lg {
+      display: none;
+    }
+
     &:hover {
-      transition: 0.3s;
+      transition: 0.5s;
       border: 0.5px solid $c-bg-primary;
     }
   }
 
   &__mobile-call:hover &__mobile-call-svg {
-    transition: 0.3s;
+    transition: 0.5s;
     fill: $c-bg-primary;
   }
 
@@ -76,5 +146,9 @@
     position: absolute;
     top: 7px;
     right: 7px;
+
+    @include lg {
+      display: none;
+    }
   }
 }

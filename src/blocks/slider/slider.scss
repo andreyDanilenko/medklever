@@ -1,10 +1,8 @@
 .slider {
   position: relative;
-
-  &__container {
-    margin: 20px auto 0;
-    width: 100vw;
-  }
+  margin: 20px auto 0;
+  width: 100vw;
+  max-width: 1600px;
 
   #viewport {
     overflow: hidden;
@@ -37,8 +35,8 @@
 
   &__indicator {
     cursor: pointer;
-    width: 15px;
-    height: 15px;
+    width: 5px;
+    height: 5px;
     margin: 0 2px;
     background-color: $c-bg-main;
     border-radius: 50%;

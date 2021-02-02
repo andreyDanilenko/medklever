@@ -1,26 +1,42 @@
 .reception {
   background-color: rgba(96, 206, 217, 0.15);
 
-  &__wrapper {
-    margin: 0 auto;
-    text-align: center;
-    width: 75%;
-  }
-
   &__title {
+    text-align: center;
     padding: 33px 0 18px;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
 
     color: $c-font-primary;
+
+    @include lg {
+      @include col(1/2);
+      margin: 0 auto;
+      font-size: 24px;
+      line-height: 29px;
+      padding: 36px 0 41px;
+    }
   }
 
-  &__form-warpper {
+  &__form {
+    @include row;
+    justify-content: center;
     font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
+
+    @include lg {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  &__contacts,
+  &__comment {
+    @include col(3/4);
+
+    @include lg {
+      @include col(4/5);
+    }
   }
 
   &__input-name {
@@ -29,6 +45,13 @@
     border: none;
     padding: 17px 24px;
     margin: 9px 0;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include lg {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 
   &__input-tel {
@@ -36,6 +59,13 @@
     border: none;
     padding: 17px 24px;
     margin: 9px 0;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include lg {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 
   &__input-text {
@@ -44,14 +74,35 @@
     border-radius: 0 0 50px 0;
     border: none;
     resize: none;
-    padding: 17px 24px;
+    padding: 17px 0;
     margin: 16px 0 27px;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include lg {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  &__button {
+    @include col(3/4);
+
+    @include lg {
+      @include col(2/7);
+    }
   }
 
   &__button-appointment {
     width: 100%;
     padding: 15px;
-    font-size: 14px;
     margin-bottom: 44px;
+    font-size: 14px;
+    line-height: 17px;
+
+    @include lg {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 }

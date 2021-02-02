@@ -1,8 +1,23 @@
 .info {
-  &__wrapper {
-    margin: 0 auto;
-    text-align: center;
-    width: 75%;
+  &__row {
+    @include row;
+    justify-content: center;
+  }
+
+  &__img-col {
+    @include col(3/4);
+
+    @include lg {
+      @include col(2/5);
+    }
+  }
+
+  &__list {
+    @include col(3/4);
+
+    @include lg {
+      @include col(3/5);
+    }
   }
 
   &__title {
@@ -10,8 +25,15 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
+    text-align: center;
 
     color: $c-font-primary;
+
+    @include lg {
+      padding: 73px 0 81px;
+      font-size: 36px;
+      line-height: 44px;
+    }
 
     &::after {
       content: "";
@@ -20,13 +42,17 @@
       height: 2px;
       margin: 11px auto 0;
       background-color: $c-bg-primary;
+
+      @include lg {
+        width: 216px;
+      }
     }
   }
 
   &__img {
     display: block;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     max-width: 372px;
   }
 
@@ -36,14 +62,27 @@
     margin: 28px 0 16px;
     font-size: 17px;
     line-height: 21px;
+    text-align: center;
+
+    @include lg {
+      margin: 0 0 16px;
+      font-size: 30px;
+      line-height: 33px;
+      text-align: left;
+    }
   }
 
   &__paragraph {
     margin: 7px 0 14px;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 12px;
     line-height: 17px;
     text-align: start;
     color: $c-font-secondary;
+
+    @include lg {
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
 }

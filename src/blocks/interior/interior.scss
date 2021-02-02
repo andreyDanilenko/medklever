@@ -13,6 +13,12 @@
 
     color: $c-font-primary;
 
+    @include lg {
+      padding: 70px 0 87px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
     &::after {
       content: "";
       display: block;
@@ -20,6 +26,10 @@
       height: 2px;
       margin: 11px auto 0;
       background-color: $c-bg-primary;
+
+      @include lg {
+        width: 216px;
+      }
     }
   }
 }

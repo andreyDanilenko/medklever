@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+  display: block;
+
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+
+  @include sm {
+    max-width: 640px + 2 * $grid-gutter;
+  }
+
+  @include md {
+    max-width: 720px + 2 * $grid-gutter;
+  }
+
+  @include lg {
+    max-width: 1160px + 2 * $grid-gutter;
+  }
+}
